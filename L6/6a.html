@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        width: 800px;
+        box-sizing: border-box;
+    }
+
+    /*Вариант №1*/
+    .one>a {
+        color: green;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        word-spacing: 2px;
+    }
+
+    .one>a:nth-child(-n+4) {
+        border-right: 3px solid red;
+        margin-right: 15px;
+        margin-bottom: 80px;
+        padding-right: 15px;
+    }
+
+    .one>a:hover {
+        color: #CE242B;
+        text-decoration: none;
+    }
+
+    /* Вариант №2*/
+    .two a {
+        color: green;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        word-spacing: 2px;
+    }
+
+    .two>a:nth-child(-n+4) {
+        border-right: 3px solid red;
+        margin-right: 15px;
+        margin-bottom: 80px;
+        padding-right: 15px;
+    }
+
+    .hover a:hover {
+        color: #CE242B;
+        text-decoration: none;
+    }
+
+    /*Вариант №3* - пробовал сделать таблицей, суть задания получилось но 
+    не могу отгрегулировать согласно размерам других строк, подскажите как возможно это сделать согласно задания,
+    чтоб не указывать через стили и отдельными классами. Можно это сделать через псевдо классы ?*/
+
+    .table a {
+        color: green;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        word-spacing: 2px;
+        table-layout: fixed;
+    }
+
+    td {
+        width: 125px;
+        padding-left: 5px;
+        text-align: center;
+    }
+
+    td:nth-child(-n+4) {
+        border-right: 3px solid red;
+    }
+
+    td a:hover {
+        color: #CE242B;
+        text-decoration: none;
+    }
+
+    /*Вфриант №4*/
+    .four a {
+        color: green;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        word-spacing: 2px;
+        width: 100px;
+        height: 100px;
+    }
+
+    a:hover {
+        color: #CE242B;
+        text-decoration: none;
+    }
+
+    .four>a:nth-child(-n+4) {
+        border-right: 3px solid red;
+        margin: 0px 15px 80px 0px;
+        padding: 0px 15px 0px 0px;
+    }
+</style>
+
+<body>
+    <div class="one">
+        <a href="#"> первая ссылка</a>
+        <a href="#"> вторая ссылка</a>
+        <a href="#"> тертья ссылка</a>
+        <a href="#"> четвертая ссылка</a>
+        <a href="#"> пятая ссылка</a>
+    </div>
+    <br>
+    <div class="two hover">
+        <a href="#"> первая ссылка</a>
+        <a href="#"> вторая ссылка</a>
+        <a href="#"> тертья ссылка</a>
+        <a href="#"> четвертая ссылка</a>
+        <a href="#"> пятая ссылка</a>
+    </div>
+    <br>
+    <table class="table">
+        <td><a href="#"> первая ссылка</a></td>
+        <td><a href="#"> вторая ссылка</a></td>
+        <td><a href="#"> третья ссылка</a></td>
+        <td><a href="#"> четвертая ссылка</a></td>
+        <td><a href="#"> пятая ссылка</a></td>
+    </table>
+    <br>
+    <div class="four">
+        <a href="#"> первая ссылка</a>
+        <a href="#"> вторая ссылка</a>
+        <a href="#"> третья ссылка</a>
+        <a href="#"> четвертая ссылка</a>
+        <a href="#"> пятая ссылка</a>
+    </div>
+</body>
+
+</html>

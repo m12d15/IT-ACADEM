@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 520px;
+            height: 300px;
+        }
+
+        a {
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        a:hover {
+            text-decoration: none;
+            background: rgb(191, 181, 181);
+        }
+
+        TABLE {
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 20px;
+            border: 1px solid rgb(77, 69, 69);
+        }
+
+        td {
+            border: 1px solid rgb(77, 69, 69);
+            padding: 20px;
+
+        }
+
+        .right {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> HTML table basics</h1>
+    <p><a style="border: 1px solid black;" href="https://www.google.com/"> Overview: Tables</a></p>
+    <p>This article gets you started with HTML tables, covering the very basics such as rows, cells, headings, making
+        cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
+    </p>
+    <table>
+        <tr>
+            <th>Prerequisites:</th>
+            <td>The basics of HTML (<a style="background: white;" href="https://www.google.com/">see Introduction to
+                    HTML</a>).</td>
+        <tr>
+            <th>Objective:</th>
+            <td>To gain basic familiarity with HTML tables.</td>
+        </tr>
+        </tr>
+    </table>
+    <h1> What is a table?</h2>
+        <p>A table is a structured set of data made up of rows and columns (<strong>tabular data</strong>). A table
+            allows you to quickly
+            and easily look up values that indicate some kind of connection between different types of data, for example
+            a
+            person and their age, or a day of the week, or the timetable for a local swimming pool.</p>
+
+        <table style="width: 420px; height: 100px;">
+            <tr style="background-color: #bec0bf;">
+                <th>Person</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td style="background-color: #dcdcdc;"><strong>Chris</strong></td>
+                <td class="right">38</td>
+            </tr>
+
+            <td style="background-color: #dcdcdc;"><strong>Dennis</strong></td>
+            <td class="right">45</td>
+            </tr>
+            <tr>
+                <td style="background-color: #dcdcdc;"><strong>Sarah</strong></td>
+                <td class="right">29</td>
+            </tr>
+            <tr>
+                <td style="background-color: #dcdcdc;"><strong>Karen</strong></td>
+                <td class="right"> 27</td>
+            </tr>
+        </table>
+</body>
+
+</html>
