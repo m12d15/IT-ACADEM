@@ -1,0 +1,362 @@
+body {
+    --bgraund-color: #f6f6f6;
+    --text-color: #828282;
+    --text-one-color: #070707;
+}
+
+.text-one-color {
+    /*серый цвет текста*/
+    color: var(--text-color);
+}
+
+.bgraund-color {
+    /*серый цвет фона*/
+    background-color: var(--bgraund-color);
+}
+
+.container {
+    /*горизонтальный контейнер*/
+    width: 985px;
+    max-width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container1 {
+    /*вертикальный контейнер*/
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container2 {
+    /*контейнер (мобильный) футер*/
+    max-width: 945px;
+    padding: 0 10px;
+    margin: 0 auto;
+
+}
+
+
+.indent {
+    /* класс отступов*/
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 40px 0px 60px 0px;
+}
+
+img {
+    /*адаптивность картинок к размеру*/
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    /*Цвет ссылки черный, без подчеркивания*/
+    color: var(--text-one-color);
+    text-decoration: none;
+}
+
+
+.line {
+    /*Серая линия(+подчеркивание)*/
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 30px;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.headermenu {
+    /*верхнее меню */
+    width: 945px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.underline-thoo {
+    /*1.черный текст ссылки +серая анимация подчеркивания*/
+    color: #070707;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.underline-thoo:after {
+    /*1.1.черный текст ссылки +серая анимация подчеркивания*/
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: #828282;
+    transition: width 0.5s;
+}
+
+.underline-thoo:hover:after {
+    /*1.2.черный текст ссылки +серая анимация подчеркивания*/
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    background-color: #828282;
+    transition: width 0.5s;
+}
+
+.underline-one {
+    /*1.серый текст ссылки +серая анимация подчеркивания*/
+    color: #828282;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.underline-one:after {
+    /*1.1.серый текст ссылки +серая анимация подчеркивания*/
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: #828282;
+    transition: width 0.5s;
+}
+
+.underline-one:hover:after {
+    /*1.2.серый текст ссылки +серая анимация подчеркивания*/
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    background-color: #828282;
+    transition: width 0.5s;
+}
+
+.info {
+    /*Размеры информационной панели под хедером*/
+    height: 165px;
+    width: 985px;
+}
+
+.name {
+    /*Размер текста(заголовка) h1*/
+    font-size: 55px;
+}
+
+.designer {
+    /*Отступы инф. текста (UX | UI designer 24 years old, Minsk)*/
+    margin: 80px 0px 0px 100px;
+}
+
+.language {
+    /*Перевернутые ссылки(RU | EN) для смены языка*/
+    display: flex;
+    transform: rotate(270deg);
+}
+
+.hover-image-scale {
+    /*1. Анимация картинок "Портфолио" (отдаление"уменьшение")*/
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.hover-image-scale img {
+    /*1.1. Анимация картинок "Портфолио" (отдаление"уменьшение")*/
+    transition: 1s;
+}
+
+.hover-image-scale img:hover {
+    /*1.2. Анимация картинок "Портфолио" (отдаление"уменьшение")*/
+    transform: scale(0.95);
+}
+
+.footer {
+    /*Футер*/
+    text-align: center;
+}
+
+.footerbotton {
+    /*1.Кнопка в футере об отправке сообщения*/
+    color: #ffffff;
+    min-width: 130px;
+    padding: 15px 55px;
+    border-radius: 50px;
+    border: 2px solid #000000;
+    background: #000000;
+}
+
+.footerbotton:hover {
+    /*1.1.Кнопка в футере об отправке сообщения*/
+    color: #000000;
+    background: #ffffff;
+}
+
+.contactsimages {
+    /*Картинки соц.сетей в футере (contacts)*/
+    width: 400px;
+    max-width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+img.small-rotate {
+    /*1.Анимация картинки футера*/
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+img.small-rotate:hover {
+    /*1.1.Анимация картинки футера*/
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+
+@media(max-width:550px) {
+
+    /*При ширине меньшей 550пикселей убирать header и info*/
+    .header {
+        display: none;
+    }
+
+    .info {
+        display: none;
+    }
+
+    .photo {
+        display: none;
+    }
+
+
+}
+
+/**/
+.header-mobile .header-row {
+    /*1.мобильный хеадер всплывающем окне меню*/
+    display: none;
+}
+
+.header-mobile .header-row {
+    /*1.1.мобильный хеадер всплывающем окне меню*/
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.header-mobile h1 {
+    /*1.2.мобильный хеадер всплывающем окне меню*/
+    margin: 0;
+}
+
+.designer-mobile {
+    padding: 35px 0px 0px 0px;
+}
+
+.menu-btn {
+    /*мобильное меню (кнопка) хеадер*/
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 15px;
+}
+
+.menu-btn:hover {/*курсор на кнопку мобильного меню*/
+    cursor: pointer;
+}
+
+/**/
+
+.mobile-menu {
+    /* display: none;*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 375px;
+    min-height: 600px;
+    box-sizing: border-box;
+    padding: 40px 0px 50px 20px;
+    border: 1px solid black;
+    display: flex;
+    background: white;
+    justify-content: space-between;
+
+
+
+}
+
+.mobile-navigation {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 20px 0px;
+    margin: 0px;
+}
+
+.menu-left {
+    font-size: 25px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.menu-right {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-menu .mobile-navigation {
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+    padding: 0px;
+
+}
+
+
+
+@media(max-width:550px) {
+    .header-mobile {
+        display: block;
+    }
+
+    .header {
+        display: none;
+    }
+}
+
+@media(min-width:550px) {
+    .header-mobile {
+        display: none;
+    }
+
+    .photo-mobile {
+        display: none;
+    }
+}
