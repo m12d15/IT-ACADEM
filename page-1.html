@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            --bgraund-color: #f6f6f6;
+            --text-color: #828282;
+            --text-one-color: #070707;
+        }
+
+        .text-one-color {
+            /*серый цвет текста*/
+            color: var(--text-color);
+        }
+
+        .bgraund-color {
+            /*серый цвет фона*/
+            background-color: var(--bgraund-color);
+        }
+
+        .container {
+            /*горизонтальный контейнер*/
+            width: 985px;
+            max-width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+            padding-left: 20px;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .container1 {
+            /*вертикальный контейнер*/
+            display: flex;
+            flex-direction: column;
+            align-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .container2 {
+            /*контейнер (мобильный) футер*/
+            max-width: 945px;
+            padding: 0 10px;
+            margin: 0 auto;
+
+        }
+
+
+        .indent {
+            /* класс отступов*/
+            text-align: center;
+            width: 100%;
+            margin: auto;
+            padding: 40px 0px 60px 0px;
+        }
+
+        img {
+            /*адаптивность картинок к размеру*/
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            /*Цвет ссылки черный, без подчеркивания*/
+            color: var(--text-one-color);
+            text-decoration: none;
+        }
+
+        .line {
+            /*Серая линия(+подчеркивание)*/
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 30px;
+            padding-left: 0px;
+            list-style: none;
+        }
+
+        .headermenu {
+            /*верхнее меню */
+            width: 945px;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .underline-thoo {
+            /*1.черный текст ссылки +серая анимация подчеркивания*/
+            color: #070707;
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .underline-thoo:after {
+            /*1.1.черный текст ссылки +серая анимация подчеркивания*/
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background-color: #828282;
+            transition: width 0.5s;
+        }
+
+        .underline-thoo:hover:after {
+            /*1.2.черный текст ссылки +серая анимация подчеркивания*/
+            content: "";
+            width: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            height: 1px;
+            background-color: #828282;
+            transition: width 0.5s;
+        }
+
+        .underline-one {
+            /*1.серый текст ссылки +серая анимация подчеркивания*/
+            color: #828282;
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .underline-one:after {
+            /*1.1.серый текст ссылки +серая анимация подчеркивания*/
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background-color: #828282;
+            transition: width 0.5s;
+        }
+
+        .underline-one:hover:after {
+            /*1.2.серый текст ссылки +серая анимация подчеркивания*/
+            content: "";
+            width: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            height: 1px;
+            background-color: #828282;
+            transition: width 0.5s;
+        }
+
+        .info {
+            /*Размеры информационной панели под хедером*/
+            height: 165px;
+            width: 985px;
+        }
+
+        .name {
+            /*Размер текста(заголовка) h1*/
+            font-size: 55px;
+        }
+
+        .designer {
+            /*Отступы инф. текста (UX | UI designer 24 years old, Minsk)*/
+            margin: 80px 0px 0px 100px;
+        }
+
+        .language {
+            /*Перевернутые ссылки(RU | EN) для смены языка*/
+            display: flex;
+            transform: rotate(270deg);
+        }
+
+        .hover-image-scale {
+            /*1. Анимация картинок "Портфолио" (отдаление"уменьшение")*/
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .hover-image-scale img {
+            /*1.1. Анимация картинок "Портфолио" (отдаление"уменьшение")*/
+            transition: 1s;
+        }
+
+        .hover-image-scale img:hover {
+            /*1.2. Анимация картинок "Портфолио" (отдаление"уменьшение")*/
+            transform: scale(0.95);
+        }
+
+        .footer {
+            /*Футер*/
+            text-align: center;
+        }
+
+        .footerbotton {
+            /*1.Кнопка в футере об отправке сообщения*/
+            color: #ffffff;
+            min-width: 130px;
+            padding: 15px 55px;
+            border-radius: 50px;
+            border: 2px solid #000000;
+            background: #000000;
+        }
+
+        .footerbotton:hover {
+            /*1.1.Кнопка в футере об отправке сообщения*/
+            color: #000000;
+            background: #ffffff;
+        }
+
+        .contactsimages {
+            /*Картинки соц.сетей в футере (contacts)*/
+            width: 400px;
+            max-width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+            padding-left: 20px;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        img.small-rotate {
+            /*1.Анимация картинки футера*/
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        img.small-rotate:hover {
+            /*1.1.Анимация картинки футера*/
+            -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+        }
+
+
+        @media(max-width:550px) {
+            /*При ширине меньшей 550пикселей убирать header и info*/
+            .header {
+                display: none;
+            }
+
+            .info {
+                display: none;
+            }
+
+        }
+
+        /**/
+        .header-mobile .header-row {
+            /*1.мобильный хеадер всплывающем окне меню*/
+            display: none;
+        }
+
+        .header-mobile .header-row {
+           /*1.1.мобильный хеадер всплывающем окне меню*/
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+
+        .header-mobile h1 {
+             /*1.2.мобильный хеадер всплывающем окне меню*/
+            margin: 0;
+        }
+
+        .designer-mobile {
+            padding: 35px 0px 0px 0px;
+        }
+
+        .menu-btn {
+            /*мобильное меню (кнопка) хеадер*/
+            border: 0;
+            background: transparent;
+            padding: 0;
+            margin: 15px;
+        }
+
+        .menu-btn:hover {
+            cursor: pointer;
+        }
+
+        /**/
+
+        .mobile-menu {
+            /* display: none;*/
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 375px;
+            min-height: 600px;
+            box-sizing: border-box;
+            padding: 40px 0px 50px 20px;
+            border: 1px solid black;
+            display: flex;
+            background: white;
+            justify-content: space-between;
+            
+
+        }
+
+        .mobile-navigation {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 20px 0px;
+            margin: 0px;
+        }
+
+        .menu-left {
+            font-size: 25px;
+            font-weight: bold;
+            justify-content: space-between;
+        }
+
+        .menu-right {
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .mobile-menu .mobile-navigation {
+            flex-direction: column;
+            gap: 40px;
+            align-items: start;
+            padding: 0px;
+
+        }
+
+        @media(max-width:550px) {
+            .header-mobile {
+                display: block;
+            }
+
+            .header {
+                display: none;
+            }
+        }
+
+        @media(min-width:550px) {
+            .header-mobile {
+                display: none;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <mobile>
+        <menu>
+            <div class="mobile-menu" style="display: hidden;">
+                <div class="menu-left">
+                    <div class="mobile-navigation">
+
+                        <a href="#">
+                            <div class="underline-thoo">Home</div>
+                        </a>
+                        <a href="#aboutme">
+                            <div class="underline-one">About me</div>
+                        </a>
+                        <a href="#skills">
+                            <div class="underline-one">Skills</div>
+                        </a>
+                        <a href="#portfolio">
+                            <div class="underline-one">Portfolio</div>
+                        </a>
+                        <a href="#contacts">
+                            <div class="underline-one">Contacts</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="menu-right">
+                    <button class="menu-btn"><img src="Page/image/Exit.png"> </button>
+                    <a href="#">
+                        <div class="language"><a href="#" class="underline-one"> RU </a><a href="#"
+                                class="underline-thoo">|
+                                EN</a></div>
+                    </a>
+                </div>
+            </div>
+        </menu>
+        <header class="header-mobile">
+            <div class="container2">
+                <div class="header-row">
+                    <h1>Denis <br> Novik</h1>
+                    <div>
+                        <button id="nav-menu-open" class="menu-btn"><img src="Page/image/btn.png"> </button>
+
+                    </div>
+
+                </div>
+                <div class="designer-mobile">UX | UI designer <br>24 years old, Minsk</div>
+            </div>
+        </header>
+    </mobile>
+    <header>
+        <div class="header">
+            <div class="headermenu container line">
+
+                <a href="#">
+                    <div class="underline-thoo">Home</div>
+                </a>
+                <a href="#aboutme">
+                    <div class="underline-one">About me</div>
+                </a>
+                <a href="#skills">
+                    <div class="underline-one">Skills</div>
+                </a>
+                <a href="#portfolio">
+                    <div class="underline-one">Portfolio</div>
+                </a>
+                <a href="#contacts">
+                    <div class="underline-one">Contacts</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <info>
+        <div class="info container">
+            <h1 class="name">Denis<br> Novik</h1>
+            <div class="designer">UX | UI designer <br>24 years old, Minsk</div>
+            <a href="#">
+                <div class="language"><a href="#" class="underline-one"> RU </a><a href="#" class="underline-thoo">|
+                        EN</a></div>
+            </a>
+        </div>
+        <div class="container1 indent"> <img src="Page/image/photo.jpg"></div>
+    </info>
+
+    <main>
+        <aboutme id="aboutme">
+            <div class="bgraund-color indent">
+                <h2>About me</h2>
+                <p>Hi, I'm Denis – UX/UI designer from Minsk.<br>
+                    I'm interested in design and everything connected with it.</p>
+                <br>
+
+                <p> I'm studying at courses "Web and mobile design<br>
+                    interfaces" in IT-Academy.</p>
+                <br>
+
+                <p>Ready to implement excellent projects<br>
+                    with wonderful people.</p>
+            </div>
+        </aboutme>
+        <skills id="skills">
+            <div class="indent">
+                <h2>Skills</h2>
+                <br>
+                <p>I work is such programs as</p>
+            </div>
+            <div class="container">
+                <div><img src="Page/image/Photoshop.png"></div>
+                <div><img src="Page/image/Illustrator.png"></div>
+                <div><img src="Page/image/Effects.png"></div>
+                <div><img src="Page/image/Figma.png"></div>
+            </div>
+        </skills>
+        <portfolio id="portfolio">
+            <div class="indent"></div>
+            <div class="container1 bgraund-color indent">
+                <h2>Portfolio</h2>
+                <div class="hover-image-scale indent"><img src="Page/image/Portfolio_levis.png" alt=""
+                        class="hover-image-scale"></div>
+                <a href="#">
+                    <div class="underline-thoo ">Online fashion store - Homepage</div>
+                </a>
+                <br>
+                <div class="indent hover-image-scale "><img src="Page/image/Portfolio_reebok.png" alt=""
+                        class="hover-image-scale"></div>
+                <a href="#">
+                    <div class="underline-thoo">Reebok Store - Concept
+                    </div>
+                </a>
+                <br>
+                <div class="indent hover-image-scale "><img src="Page/image/Portfolio_braun.png" alt=""
+                        class="hover-image-scale"></div>
+                <a href="#">
+                    <div class="underline-thoo">Braun Landing Page - Concept</div>
+                </a>
+                <br>
+        </portfolio>
+    </main>
+
+    <footer id="contacts">
+        <div class="footer indent">
+            <h2>Contacts</h2>
+            <p>Want to know more or just chat?<br>
+                You are welcome!</p>
+            <br>
+            <br>
+            <a href="mailto:" class="footerbotton" style="text-decoration: none;">
+                Send message</a>
+        </div>
+        <div class="contactsimages  ">
+            <a href="#">
+                <div><img class="small-rotate" src="Page/image/Linkidin.png" alt=""></div>
+            </a>
+            <a href="#">
+                <div><img class="small-rotate" src="Page/image/Instagramm.png" alt=""></div>
+            </a>
+            <a href="#">
+                <div><img class="small-rotate" src="Page/image/Behance.png" alt=""></div>
+            </a>
+            <a href="#">
+                <div><img class="small-rotate" src="Page/image/Dribble.png" alt=""></div>
+            </a>
+        </div>
+        <div class="footer indent text-one-color ">
+            <p>Like me on <br>
+                <a class="underline-one" href="#">LinkedIn,</a> <a class="underline-one" href="#">Instagram,</a> <a
+                    class="underline-one" href="#">Behance,</a> <a class="underline-one" href="#">Dribble</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function(){
+        const navMenuButton = document.querySelector("#nav-menu-open");
+        navMenuButton.addEventListener("click", function(){
+            const menu = document.querySelector(".mobile-menu");
+            menu.classList.remove("hidden");
+        });
+        window.addEventListener("click", function(event){
+            if(event.target.closest("#nav-menu-open")){
+                return;
+            }
+            const menu = document.querySelector(".mobile-menu");
+            menu.classList.add("hidden");
+        });
+
+    });
+</script>
+
+</html>
