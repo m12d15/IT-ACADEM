@@ -7,47 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 
 </head>
 
 <body>
-    <mobile>
-        <menu>
-            <div class="mobile-menu" style="display: none;">
-                <div class="menu-left">
-                    <div class="mobile-navigation">
-                        <a href="#">
-                            <div class="underline-thoo">Home</div>
-                        </a>
-                        <a href="#aboutme">
-                            <div class="underline-one">About me</div>
-                        </a>
-                        <a href="#skills">
-                            <div class="underline-one">Skills</div>
-                        </a>
-                        <a href="#portfolio">
-                            <div class="underline-one">Portfolio</div>
-                        </a>
-                        <a href="#contacts">
-                            <div class="underline-one">Contacts</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="menu-right">
-                    <button class="menu-btn"><img src="image/Exit.png"> </button>
-                    <a href="#">
-                        <div class="language"><a href="#" class="underline-one"> RU </a><a href="#"
-                                class="underline-thoo">|
-                                EN</a></div>
-                    </a>
+    <section>
+
+        <div id="nav-menu-open" class="hidden mobile-menu">
+            <div class="menu-left">
+                <div class="mobile-navigation">
+                    <a class="underline-thoo" href="#">Home </a>
+                    <a class="underline-one" href="#aboutme">About me</a>
+                    <a class="underline-one" href="#skills">Skills</a>
+                    <a class="underline-one" href="#portfolio">Portfolio</a>
+                    <a class="underline-one" href="#contacts">Contacts</a>
                 </div>
             </div>
-        </menu>
+            <div class="menu-right">
+                <button class="menu-btn"><img src="image/Exit.png"> </button>
+                <a href="#">
+                    <div class="language"><a href="#" class="underline-one"> RU </a><a href="#" class="underline-thoo">|
+                            EN</a></div>
+                </a>
+            </div>
+        </div>
+
         <header class="header-mobile">
-            <div class="container2">
+            <div class="mobile-direction">
                 <div class="header-row">
                     <h1>Denis <br> Novik</h1>
                     <div>
@@ -57,31 +49,21 @@
                 <div class="designer-mobile">UX | UI designer <br>24 years old, Minsk</div>
             </div>
         </header>
-    </mobile>
+    </section>
     <header>
         <div class="header">
-            <div class="headermenu container line">
-                <a href="#">
-                    <div class="underline-thoo">Home</div>
-                </a>
-                <a href="#aboutme">
-                    <div class="underline-one">About me</div>
-                </a>
-                <a href="#skills">
-                    <div class="underline-one">Skills</div>
-                </a>
-                <a href="#portfolio">
-                    <div class="underline-one">Portfolio</div>
-                </a>
-                <a href="#contacts">
-                    <div class="underline-one">Contacts</div>
-                </a>
+            <div class="headermenu horizontal-direction line">
+                <a class="underline-thoo" href="#">Home </a>
+                <a class="underline-one" href="#aboutme">About me</a>
+                <a class="underline-one" href="#skills">Skills</a>
+                <a class="underline-one" href="#portfolio">Portfolio</a>
+                <a class="underline-one" href="#contacts">Contacts</a>
             </div>
         </div>
     </header>
 
-    <info>
-        <div class="info container">
+    <section>
+        <div class="info horizontal-direction">
             <h1 class="name">Denis<br> Novik</h1>
             <div class="designer">UX | UI designer <br>24 years old, Minsk</div>
             <a href="#">
@@ -89,12 +71,12 @@
                         EN</a></div>
             </a>
         </div>
-        <div class="photo container1 indent"> <img src="image/photo.jpg"></div>
-        <div class="photo-mobile container1 indent"> <img src="image/photo-mobile.png"></div>
-    </info>
+        <div class="photo vertical-direction indent"> <img src="image/photo.jpg"></div>
+        <div class="photo-mobile vertical-direction indent"> <img src="image/photo-mobile.png"></div>
+    </section>
 
     <main>
-        <aboutme id="aboutme">
+        <section id="aboutme">
             <div class="bgraund-color indent">
                 <h2>About me</h2>
                 <p>Hi, I'm Denis – UX/UI designer from Minsk.<br>
@@ -106,23 +88,58 @@
                 <p>Ready to implement excellent projects<br>
                     with wonderful people.</p>
             </div>
-        </aboutme>
-        <skills id="skills">
+        </section>
+        <section id="skills">
             <div class="indent">
                 <h2>Skills</h2>
                 <br>
                 <p>I work is such programs as</p>
             </div>
-            <div class="container">
-                <div><img src="image/Photoshop.png"></div>
-                <div><img src="image/Illustrator.png"></div>
-                <div><img src="image/Effects.png"></div>
-                <div><img src="image/Figma.png"></div>
+            <div class="horizontal-direction">
+                <div><img src="image/photoshop.png">
+                    <p class="text-one-color">Adobe<br>
+                        Photoshop</p>
+                    <div class="indent"><img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/white-star.png">
+                    </div>
+                </div>
+                <div><img src="image/illustrator.png">
+                    <p class="text-one-color">Adobe<br>
+                        Illustrator</p>
+                    <div class="indent"><img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/white-star.png">
+                        <img src="image/white-star.png">
+                    </div>
+                </div>
+                <div><img src="image/effects.png">
+                    <p class="text-one-color">Adobe<br>
+                        After Effects</p>
+                    <div class="indent"><img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/white-star.png">
+                    </div>
+                </div>
+                <div><img src="image/figmaa.png">
+                    <p class="text-one-color"><br>Figma</p>
+                    <div class="indent"><img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/black-star.png">
+                        <img src="image/white-star.png">
+                    </div>
+                </div>
             </div>
-        </skills>
-        <portfolio id="portfolio">
+        </section>
+        <section id="portfolio">
             <div class="indent"></div>
-            <div class="container1 bgraund-color indent">
+            <div class="vertical-direction bgraund-color indent">
                 <h2>Portfolio</h2>
                 <div class="hover-image-scale indent"><img src="image/Portfolio_levis.png" alt=""
                         class="hover-image-scale"></div>
@@ -143,7 +160,7 @@
                     <div class="underline-thoo">Braun Landing Page - Concept</div>
                 </a>
                 <br>
-        </portfolio>
+        </section>
     </main>
 
     <footer id="contacts">
@@ -184,7 +201,7 @@
         const navMenuButton = document.querySelector("#nav-menu-open");
         navMenuButton.addEventListener("click", function () {
             const menu = document.querySelector(".mobile-menu");
-            menu.classList.remove("hidden");
+            menu.classList.remove(".hidden");
         });
         window.addEventListener("click", function (event) {
             if (event.target.closest("#nav-menu-open")) {
