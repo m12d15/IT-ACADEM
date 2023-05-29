@@ -6,7 +6,7 @@
 
 [Github Pages](https://m12d15.github.io/IT-ACADEM/Page/page.html)
 
-![Скриншот сайта](./readme_img.png)
+![Скриншот сайта](./Page/readme_img.png)
 
 
 [Исходный макет на Figma](https://www.figma.com/file/5D9pDuLtS042hzaoN69Kd7/Free--Landing--Page-Template?node-id=254%3A515&t=OcdC0kkJTSqg88wN-0)
