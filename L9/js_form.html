@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {
+            display: flex;
+            max-width: 150px;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            color: #222;
+            padding: 5px 26px 10px 15px;
+            box-shadow: Inset 0 1px 25px rgba(0, 0, 0, 0.55);
+            border-radius: 25px;
+        }
+
+        input:focus {
+            border: 2px solid #c3c6ce;
+        }
+
+        input::placeholder {
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        input:focus::placeholder {
+            color: #999;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 50px;
+            width: 370px;
+            height: 480px;
+            background: rgb(223, 225, 235);
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+    </style>
+
+    <script>
+
+        window.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelector(".survey_form").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                let form = document.querySelector(".survey_form");
+
+                let lastname = form.querySelector("input[name='lname']").value;
+                let firstname = form.querySelector("input[name='fname']").value;
+                let fathersname = form.querySelector("input[name='pname']").value;
+                let age = form.querySelector("input[name='age']").value;
+
+                let gender;
+                let selectedRadio = form.querySelector("input[name='gender']:checked");
+                if (selectedRadio) {
+                    gender = selectedRadio.value;
+                }
+
+                let genderLabel = "мужской";
+                if (gender === "famale") {
+                    genderLabel = "женский";
+                }
+
+                alert(`Ваше ФИО:  ${lastname} ${firstname} ${fathersname}  
+        Ваш возраст в годах:  ${age} 
+        Ваш возраст в днях:  ${age * 365}  
+        Вам будет через 5 лет:  ${Number(age) + 5}  
+        Ваш пол мужской ?:  ${genderLabel} 
+        Вы на пенсии ?:  ${age >= 65 ? "Да" : "Нет"}`)
+
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>Опрос</h1>
+    <form class="survey_form">
+        <div><label>Фамилия<input name="lname"></label></div>
+        <div><label>Имя<input name="fname"></label></div>
+        <div><label>Отчество<input name="pname"></label></div>
+        <div><label>Возраст в годах<input type="number" min="0" max="150" name="age"></label></div>
+
+        <div>
+            Пол<br>
+            <label>Мужской<input type="radio" name="gender" value="male"></label>
+            <label>Женский<input type="radio" name="gender" value="female"></label>
+        </div>
+
+        <div>
+            <input type="submit" value="Отправить">
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #ecd448;
+        }
+
+        .todo {
+            max-width: 600px;
+            padding: 30px;
+            margin: 0 auto;
+        }
+
+        .card {
+            width: 430px;
+            height: auto;
+            border-radius: 20px;
+            padding: 35px;
+            background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+        }
+
+        .card__content {
+            background: rgb(5, 6, 45);
+            border-radius: 17px;
+            width: 100%;
+            height: 100%;
+        }
+
+        input {
+            outline: 2px solid #FEBF00;
+            border: 0;
+            background-color: #e2e2e2;
+            outline-offset: 3px;
+            padding: 10px 1rem;
+        }
+
+        ul li {
+      
+            cursor: pointer;
+            list-style-type: none;
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        ul li:hover {
+            background: #000;
+        }
+
+        button {
+            padding: 12px;
+            margin: 25px;
+            border: 2px solid #fff;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: #ecd448;
+            box-shadow: 0 2px 0 2px #000;
+        }
+
+        button:hover {
+            background-color: #4cc9f0;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            let btn = document.querySelector(".todo__controls button");
+            btn.addEventListener("click", function () {
+                let input = document.querySelector(".todo__controls input");
+                let inputValue = input.value.trim();
+
+                if (!inputValue) {
+                    input.focus();
+                    return;
+                }
+
+                let ul = document.querySelector(".todo__list ul");
+
+                let newItem = document.createElement("li");
+                newItem.textContent = inputValue;
+                newItem.addEventListener("click", function () {
+                    let allItems = ul.querySelectorAll("li");
+
+
+                    newItem.classList.add("selected_item");
+                });
+                
+                newItem.addEventListener("dblclick", function () {
+                    if (confirm(`Удалить ${inputValue}?`)) {
+                        newItem.remove();
+                    }
+                });
+
+
+                ul.appendChild(newItem);
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <h1>T0D0 LisT</h1>
+        <div class="todo">
+            <div class="todo__controls">
+                <input type="text" name="name" placeholder="Введите название дела">
+                <button>Добавить</button>
+            </div>
+            <div class="todo__list">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
